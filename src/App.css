@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  height: 100vh; /* viewport height */
+  width: 100vw;  /* viewport width */
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: #331e36;
+  color: #c2efeb;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 30px;
+  flex-basis: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.header .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  color: white;
+}
+
+.card:hover {
+  opacity: 80%;
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #331e36;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+.card p {
+  flex: 0 0 40;
+  min-height: 40px;
+  font-size: 30px;
+}
+
+.card img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  box-sizing: border-box;
+  gap: 15px;
+  min-height: 0px;
+  flex-grow: 7;
+  flex-shrink: 1;
+  flex-basis: 0;
 }
